@@ -1,0 +1,25 @@
+{
+  "name": "graphql-service",
+  "version": "1.0.0",
+  "description": "A simple graphQL service that processes a single entity, Stack. Stack has many Cards. Cards just contain a simple long string content.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "cross-env  DB_URL=mongodb://localhost:27017/ DB_NAME=notes nodemon ./src/index.js",
+    "test": "cross-env  DB_URL=mongodb://localhost:27017/ DB_NAME=notes_test jest --watchAll"
+  },
+  "author": "Rajesh Naroth",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^2.23.1",
+    "mongodb": "^3.0.5",
+    "ramda": "^0.25.0"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "jest": "^22.4.3",
+    "nodemon": "^1.17.2"
+  }
+}
